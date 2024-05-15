@@ -163,12 +163,12 @@ export default function Quiz() {
                 <Typography variant="h3" align="center" gutterBottom className='page-title'>
                     Test Preparation
                 </Typography>
+                <Typography variant="body1" gutterBottom className='question-content'>
+                    Choose any category to prepare for your test.
+                </Typography>
                 <Grid container spacing={4}>
-                    <Grid item md={6}>
-                        <Typography variant="body1" gutterBottom className='question-content'>
-                            Choose any category to prepare for your test.
-                        </Typography>
-                        {!formSubmitted ? (
+                    {!formSubmitted ? (
+                        <Grid item md={6}>
                             <form onSubmit={handleFormSubmit}>
                                 <FormControl sx={{ m: 2 }} className='question-list'>
                                     <FormGroup>
@@ -215,8 +215,10 @@ export default function Quiz() {
                                     <Button variant="contained" type="submit">Submit</Button>
                                 </div>
                             </form>
-                        ) : null}
-                        {qns.length !== 0 ? (
+                        </Grid>
+                    ) : null}
+                    {qns.length !== 0 ? (
+                        <Grid item md={12}>
                             <Card
                                 sx={{
                                     maxWidth: 640, mx: 'auto', mt: 5,
@@ -235,7 +237,7 @@ export default function Quiz() {
                                 <Box>
                                     <LinearProgress variant="determinate" value={(qnIndex + 1) * 100 / questionCount} />
                                 </Box>
-                               
+                            
                                 <CardContent>
                                     <Typography variant="h6">
                                         {qns[qnIndex].qnInWords}
@@ -258,13 +260,15 @@ export default function Quiz() {
                                     </List>
                                 </CardContent>
                             </Card>
-                        ) : null}
-                    </Grid >
-                    <Grid item md={6}>
-                        <div className='question-image'>
-                            <img src='/images/png/test-preparation2.webp' />
-                        </div>
-                    </Grid>
+                        </Grid>
+                    ) : null}
+                    {!formSubmitted ? (
+                        <Grid item md={6}>
+                            <div className='question-image'>
+                                <img src='/images/png/test-preparation2.webp' />
+                            </div>
+                        </Grid>
+                    ) : null}
                 </Grid>
             </Container>
         </div>

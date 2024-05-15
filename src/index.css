@@ -283,7 +283,110 @@ code {
   height: 54px;
   padding: 6px 20px;
 }
+/* question page */
+.question-main{
+  background-color: #1b1b1b;
+  height: 100vh;
+  overflow: auto;
+}
+.question-main .page-title{
+  color: #ffffff;
+  padding: 20px 0 0px;
+}
+.question-main .question-content{
+  color: #a3a3a3;
+  text-align: center;
+  font-size: 22px;
+  padding-bottom: 20px;
+}
+.question-main .question-list{
+  width: 100%;
+  display: flex;
+}
+.question-main .question-list label{
+  margin-right: 10px;
+  border: 1px solid #ffffff;
+  padding: 5px 9px;
+  border-radius: 5px; 
+  margin-bottom: 10px;
+}
+.question-main .question-list label span{
+  color: #ffffff;
+}
+.question-image{
+  width: 100%;
+  height: 100%;
+}
+.question-image img{
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+  border-radius: 12px;
+}
+.question-foot{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.question-foot .questionInput{
+  width: 200px;
+}
+.question-foot .questionInput label{
+  color: #ffffff;
+}
+.question-foot .questionInput input{
+  color: #ffffff;
+}
+.question-foot .questionInput .MuiOutlinedInput-notchedOutline{
+  border-color: #ffffff;
+}
+.question-foot button{
+  height: 54px;
+  padding: 6px 20px;
+}
 
+/* cunsultation page */
+.start-assessment{
+  background-color: #1b1b1b;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+.ss-inner{
+  width: 50%;
+  margin: 0 auto;
+}
+.start-assessment .ss-title{
+  margin-bottom: 0;
+  color: #ffffff;
+}
+.career-time{
+  margin: 25px 0;
+}
+.career-time .ct-title{
+  color: #ffffff;
+  margin-bottom: 0;
+  line-height: 1;
+  color: #a3a3a3;
+  text-transform: capitalize;
+}
+.start-assessment button{
+  margin-bottom: 25px;
+  width: 100%;
+  padding: 12px 20px;
+  background: #ffffff;
+  color: #000000;
+  font-weight: 500;
+}
+.start-assessment .css-sghohy-MuiButtonBase-root-MuiButton-root:hover{
+  background-color: #86429a;
+  color: #ffffff;
+}
+.start-assessment img{
+  border-radius: 12px;
+  width: 100%;
+}
 /* responsive */
 @media (max-width: 1024px) {
   .stepper-main .MuiStepper-vertical {

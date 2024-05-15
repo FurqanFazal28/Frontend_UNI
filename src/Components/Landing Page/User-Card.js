@@ -1,4 +1,5 @@
 import "../css/User-Card.css";
+import { Link } from "react-router-dom";
 
 function UserCard() {
   return (
@@ -7,9 +8,11 @@ function UserCard() {
         <div class="layer-front flex gap-[130px]">
           <div class="rectangle w-[319px]   back-rectangle  flex flex-col p-2 gap-1 rounded-xl">
             <div class="flex gap-2 items-center pl-[2px]">
+            <Link to="/unifilter">
               <h2 class="text-white font-Poppins font-medium bg-[#2D429B] rounded-lg p-4 text-[25px]">
                 University Filtration
               </h2>
+              </Link>
             </div>
           </div>
         </div>
@@ -86,17 +89,21 @@ function UserCard() {
         <div class="layer-middle flex gap-[130px]">
           <div class="rectangle w-[319px]   back-rectangle  flex flex-col p-2 gap-1 rounded-xl">
             <div class="flex gap-2 items-center pl-[2px]">
-              <h2 class="text-white font-Poppins font-medium bg-[#2D429B]  p-4 rounded-lg text-[25px]">
-                Test Practice
-              </h2>
+                <Link to="/question">
+                  <h2 class="text-white font-Poppins font-medium bg-[#2D429B]  p-4 rounded-lg text-[25px]">
+                    Test Practice
+                  </h2>
+                </Link>
             </div>
           </div>
 
           <div class="rectangle w-[319px]   back-rectangle  flex flex-col p-2 gap-1 rounded-xl">
             <div class="flex gap-2 items-center pl-[2px]">
-              <h2 class="text-white font-Poppins font-medium bg-[#2D429B] p-4 rounded-lg text-[25px]">
-                Discussion Forum
-              </h2>
+            <Link to="/">
+                <h2 class="text-white font-Poppins font-medium bg-[#2D429B] p-4 rounded-lg text-[25px]">
+                  Discussion Forum
+                </h2>
+              </Link>
             </div>
           </div>
         </div>
@@ -173,9 +180,11 @@ function UserCard() {
         <div class="layer-back flex gap-[130px]">
           <div class="rectangle w-[319px]   back-rectangle  flex flex-col p-2 gap-1 rounded-xl">
             <div class="flex gap-2 items-center pl-[2px]">
+            <Link to="/consultation">
               <h2 class="text-white font-Poppins font-medium bg-[#2D429B] p-4 rounded-lg text-[25px]">
                 Ai Consultation
               </h2>
+              </Link>
             </div>
           </div>
         </div>

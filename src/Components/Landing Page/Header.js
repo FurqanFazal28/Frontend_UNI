@@ -18,7 +18,7 @@ function Header() {
               <div class="flex gap-2 justify-center items-center">
                 <img src="./images/svg/home-2.svg" alt="" />
                 <h2 class="text-[#444750] text-sm font-normal font-Poppins">
-                  <Link to="/consultant">Ai Consultation</Link>
+                  <Link to="/consultation">Ai Consultation</Link>
                 </h2>
               </div>
               <div class="flex gap-2 justify-center items-center">

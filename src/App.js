@@ -9,6 +9,7 @@ import LandingPage from "./Components/Landing Page/Landing-Page";
 import List from "./Components/Uni Lists/list";
 import Details from "./Components/Uni Lists/Details";
 import Continue from "./Components/ContinueAssesment";
+import Consultation from "./Components/Consultation";
 function App() {
   return (
     <div className="App">
@@ -25,6 +26,7 @@ function App() {
             <Route path="/unifilter" element={<List />} />
             <Route path="/uniDetails" element={<Details />} />
             <Route path="/continue" element={<Continue />} />
+            <Route path="/consultation" element={<Consultation />} />
           </Routes>
         </ContextProvider>
       </BrowserRouter>
