@@ -1,0 +1,23 @@
+.font-Poppins{
+    font-family: Poppins;
+}
+
+
+
+.animation{
+    
+   
+   
+    transition: transform 0.5s ease-in-out;
+    
+    
+  }
+
+
+
+
+
+
+.video-container:hover .animation {
+    transform: scale(1.1);
+}

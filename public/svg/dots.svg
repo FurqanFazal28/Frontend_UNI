@@ -1,0 +1,10 @@
+<svg width="54" height="15" viewBox="0 0 54 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="slideIndicator">
+<circle id="Oval" cx="4.56757" cy="4.56757" r="4.56757" transform="matrix(1 0 0 -1 43.8652 12.2437)" stroke="black"/>
+<circle id="Oval_2" cx="4.56757" cy="4.56757" r="4.56757" transform="matrix(1 0 0 -1 1 12.2436)" stroke="black"/>
+<g id="activeSlide">
+<circle id="Oval_3" cx="4.56757" cy="4.56757" r="4.56757" transform="matrix(1 0 0 -1 23.4863 12.2432)" fill="#3579F8"/>
+<circle id="Oval_4" cx="6.67568" cy="6.67568" r="6.67568" transform="matrix(1 0 0 -1 21.3779 14.3516)" stroke="#3579F8"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,82 @@
+.layer-container {
+    position: relative;
+  
+    /* background-color: blue; */
+  }
+
+
+  .layer-front {
+    position: absolute;
+    /* z-index: 3; */
+    top: 224px;
+    /* background-color: green; */
+    /* left: 20px; */
+    right: 379px;
+  }
+  .layer-middle {
+    position: absolute;
+    /* z-index: 2; */
+    top: 96px;
+    left: 66px;
+  }
+
+
+  .layer-back {
+    position: absolute;
+    /* z-index: 1; */
+    /* top: 60px; */
+    left: 261px;
+   
+  }
+
+  .rectangle {
+   
+    transition: transform 0.9s ease-in-out;
+    position: relative;
+    
+  }
+
+
+  .layer-container:hover .rectangle {
+    transform: scale(1);
+  }
+
+  .layer-container:hover .rectangle:hover {
+    transform: scale(1.2);
+    z-index: 4; /* Bring the hovered rectangle to the front */
+    /* transition-timing-function: cubic-bezier(0.9, 0, 0.58, 0.9); Adjust the timing function for hover in */
+  }
+  .front-rectangle1 {
+  
+    z-index: 3;
+  }
+
+  .front-rectangle2 {
+    z-index: 3;
+  }
+
+
+  .middle-rectangle1 {
+    z-index: 2;
+  }
+
+  .middle-rectangle2 {
+    z-index: 2;
+  }
+  .back-rectangle {
+    z-index: 1;
+  }
+
+
+  .font-Lexend{
+    font-family: Lexend;
+}
+
+.font-Poppins{
+    font-family: Poppins;
+}
+
+
+.font-Raleway{
+    font-family: Raleway;
+}
