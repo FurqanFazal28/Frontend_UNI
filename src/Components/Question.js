@@ -163,9 +163,7 @@ export default function Quiz() {
                 <Typography variant="h3" align="center" gutterBottom className='page-title'>
                     Test Preparation
                 </Typography>
-                <Typography variant="body1" gutterBottom className='question-content'>
-                    Choose any category to prepare for your test.
-                </Typography>
+            
                 <Grid container spacing={4}>
                     {!formSubmitted ? (
                         <Grid item md={6}>

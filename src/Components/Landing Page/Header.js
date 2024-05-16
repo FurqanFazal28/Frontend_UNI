@@ -42,10 +42,14 @@ function Header() {
             </div>
 
             <div class="flex gap-2">
+              <Link to="https://discussionforum-liard.vercel.app/">
               <button>Login</button>
+              </Link>
+              <Link to="https://discussionforum-liard.vercel.app/register">
               <button class="font-Poppins bg-[#2D429B] h-[34px] rounded-lg font-medium">
                 <span class="text-white py-[10px] px-[16px]">Register</span>
               </button>
+              </Link>
             </div>
           </div>
         </div>

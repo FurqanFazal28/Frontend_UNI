@@ -10,7 +10,7 @@ export default function Consultation () {
             <div className='start-assessment'>
                     <div className='ss-inner'>
                         <Typography variant="h3" align="center" gutterBottom className='ss-title'>
-                            Test Preparation
+                            Get AI Consultation
                         </Typography>
                         <div className='career-time'>
                             <Typography variant="h6" align="center" gutterBottom className='ct-title'>
