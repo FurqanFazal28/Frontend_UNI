@@ -56,6 +56,15 @@ function List() {
             "https://unilinkapiv1.azurewebsites.net/api/LUMS/LUMSDocuments",
           ],
         },
+        {
+          name: "Bahria University",
+          apis: [
+            "https://unilinkapiv1.azurewebsites.net/api/Bahria/BahriaCalendar",
+            "https://unilinkapiv1.azurewebsites.net/api/Bahria/BahriaDepartments",
+            "https://unilinkapiv1.azurewebsites.net/api/Bahria/BahriaFees",
+            "https://unilinkapiv1.azurewebsites.net/api/Bahria/BahriaDocuments",
+          ],
+        },
       ];
 
       const finalArray = await Promise.all(
@@ -244,7 +253,7 @@ function List() {
                     ))}
                 </div>
 
-                <div>
+                {/* <div>
                   <h3 className="font-bold">Campus:</h3>
                   {uni.departments
                     ?.map((obj, idx) => obj.campus)
@@ -252,7 +261,7 @@ function List() {
                     .map((campus, idx) => (
                       <div key={idx}>{campus}</div>
                     ))}
-                </div>
+                </div> */}
 
                 <div className="flex gap-2 justify-center items-center mt-4">
                   <Button
