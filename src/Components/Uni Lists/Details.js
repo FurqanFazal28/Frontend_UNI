@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import Header from '../Landing Page/Header';
+import Grid from '@mui/material/Grid';
 
 function Details() {
   const location = useLocation();
@@ -23,11 +24,13 @@ function Details() {
     <>
     <Header></Header>
       <div className="relative">
-        <img
-          src="./images/png/bannerone.png"
-          alt="University"
-          className="w-full"
-        />
+        <div className="uni-detail-banner">
+          <img
+            src="./images/png/bannerone.png"
+            alt="University"
+            className="w-full"
+          />
+        </div>
         <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center text-white">
           <h2 className="text-4xl font-bold">{selectedUniversity.name}</h2>
           {/* Display other details like location here */}
@@ -65,6 +68,33 @@ function Details() {
           </select>
         </div>
 
+        <Grid container justifyContent="center">
+          <Grid item md={4}>
+            {/* Fees */}
+            <div className="bg-white overflow-hidden shadow rounded-lg mt-5">
+              <div className="px-4 py-5 sm:p-6">
+                <h3 className="text-lg font-medium text-gray-900">Fees</h3>
+                <ul className="mt-2 list-disc pl-5">
+                  {selectedUniversity.fees.map((fee, index) => (
+                    <li key={index} className="text-sm text-gray-500 text-left list-none text-center ">
+                      <span className="font-semibold">
+                        {" "}
+                        Total Fee:{" "}
+                      </span>{" "}
+                      {fee.admissionFee}
+                      <br></br>
+                      <span className="font-semibold">
+                        {" "}
+                        PerCredit Hour Fee:{" "}
+                      </span>{" "}
+                      {fee.perCreditHourFee}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </Grid>
+        </Grid>
         <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
           <div className="bg-white overflow-hidden shadow rounded-lg">
             <div className="px-4 py-5 sm:p-6">
@@ -118,25 +148,6 @@ function Details() {
                 {selectedUniversity.document.map((doc, index) => (
                   <li key={index} className="text-sm text-gray-500 text-left">
                     {doc.documentRequirement}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          {/* Fees */}
-          <div className="bg-white overflow-hidden shadow rounded-lg">
-            <div className="px-4 py-5 sm:p-6">
-              <h3 className="text-lg font-medium text-gray-900">Fees</h3>
-              <ul className="mt-2 list-disc pl-5">
-                {selectedUniversity.fees.map((fee, index) => (
-                  <li key={index} className="text-sm text-gray-500 text-left">
-                    {fee.admissionFee}
-                    <br></br>
-                    <span className="font-semibold">
-                      {" "}
-                      PerCredit Hour Fee:{" "}
-                    </span>{" "}
-                    {fee.perCreditHourFee}
                   </li>
                 ))}
               </ul>

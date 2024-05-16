@@ -14,7 +14,7 @@ export default function Consultation () {
                         </Typography>
                         <div className='career-time'>
                             <Typography variant="h6" align="center" gutterBottom className='ct-title'>
-                                30 minutes career test
+                                10 minutes career test
                             </Typography>
                         </div>
                         <Link to="/consultant">

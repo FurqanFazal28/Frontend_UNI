@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Container, Typography, Button, LinearProgress, Stepper, Step, StepLabel, StepContent } from '@mui/material';
 import ConsultationResponse from './ConsultationResponse';
+import { Link, useNavigate } from 'react-router-dom';
 
 const API_URL = 'https://unilinkapiv1.azurewebsites.net/api/Consultation/GetQuestion';
 const POST_URL = 'https://unilinkapiv1.azurewebsites.net/api/Consultation/GetConsultation';
@@ -14,6 +15,7 @@ const VerticalLinearStepper = () => {
     const [showResponse, setShowResponse] = useState(false);
     const [responseText, setResponseText] = useState('');
     const [errorText, setErrorText] = useState('');
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch(API_URL)
@@ -171,8 +173,8 @@ const response = await fetch(urlWithParams, {
     };
 
     const handleBackToHome = () => {
-        // Implement navigation logic to go back to the home page
-        console.log('Navigate back to home page');
+        // Navigate to the home page
+        navigate('/consultation');
     };
 
     return (

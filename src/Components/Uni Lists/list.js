@@ -4,6 +4,7 @@ import { Button, Slider, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Header from '../Landing Page/Header';
+import Grid from '@mui/material/Grid';
 
 function List() {
   const [universitiesData, setUniversitiesData] = useState([]);
@@ -147,69 +148,73 @@ function List() {
   return (
     <>
       <Header></Header>
-      <div className="w-full max-w-[1920px] mx-auto">
+      <div className="w-full max-w[1920px] mx-auto">
         <div className="p-4 border rounded-lg shadow-lg m-10">
           <div className="m-2 flex flex-col">
-            <div className="flex justify-between gap-3 pb-2">
-              <div className="flex gap-2">
+            <div className="flex gap-3 pb-2">
+              <Grid container spacing={4}>
+                <Grid item md={6}>
+                  <label className="font-bold flex justify-content-start">
+                      University Name
+                    </label>
+                    <select
+                      value={selectedName}
+                      className="border rounded-md border-gray-400 w-full p-3 mt-3"
+                      onChange={(e) => setSelectedName(e.target.value)}
+                    >
+                      <option value="">All Names</option>
+                      {universitiesData.map((uni) => (
+                        <option key={uni.name} value={uni.name}>
+                          {uni.name}
+                        </option>
+                      ))}
+                    </select>
+                </Grid>
+                <Grid item md={6}>
+                  <label className="font-bold flex justify-content-start">
+                    Campus
+                  </label>
+                  <select
+                    value={selectedCampus}
+                    className="border rounded-md border-gray-400 w-full p-3 mt-3 w-full"
+                    onChange={(e) => setSelectedCampus(e.target.value)}
+                  >
+                    <option value="">All Campuses</option>
+                    {universitiesData
+                      .flatMap((uni) => uni.departments.map((dept) => dept.campus))
+                      .filter(
+                        (campus, index, self) => self.indexOf(campus) === index
+                      )
+                      .map((campus) => (
+                        <option key={campus} value={campus}>
+                          {campus}
+                        </option>
+                      ))}
+                  </select>
+                </Grid>
+                <Grid item md={6}>
                 <label className="font-bold flex justify-center items-center">
-                  University Name
-                </label>
-                <select
-                  value={selectedName}
-                  className="border rounded-md border-gray-400"
-                  onChange={(e) => setSelectedName(e.target.value)}
-                >
-                  <option value="">All Names</option>
-                  {universitiesData.map((uni) => (
-                    <option key={uni.name} value={uni.name}>
-                      {uni.name}
-                    </option>
-                  ))}
-                </select>
-                <label className="font-bold flex justify-center items-center">
-                  Campus
-                </label>
-                <select
-                  value={selectedCampus}
-                  className="border rounded-md border-gray-400"
-                  onChange={(e) => setSelectedCampus(e.target.value)}
-                >
-                  <option value="">All Campuses</option>
-                  {universitiesData
-                    .flatMap((uni) => uni.departments.map((dept) => dept.campus))
-                    .filter(
-                      (campus, index, self) => self.indexOf(campus) === index
-                    )
-                    .map((campus) => (
-                      <option key={campus} value={campus}>
-                        {campus}
-                      </option>
-                    ))}
-                </select>
-              </div>
-              <div>
-                <label className="font-bold flex justify-center items-center">
-                  Fee Range (RS)
-                </label>
-                <Slider
-                  value={selectedFeeRange}
-                  onChange={(event, newValue) => setSelectedFeeRange(newValue)}
-                  valueLabelDisplay="auto"
-                  min={0}
-                  max={200000}
-                  aria-labelledby="fee-range-slider"
-                />
-              </div>
-              <div>
+                    Fee Range (RS)
+                  </label>
+                  <Slider
+                    value={selectedFeeRange}
+                    onChange={(event, newValue) => setSelectedFeeRange(newValue)}
+                    valueLabelDisplay="auto"
+                    min={0}
+                    max={200000}
+                    aria-labelledby="fee-range-slider"
+                  />
+                </Grid>
+                <Grid item md={6}>
                 <input
-                  type="text"
-                  placeholder="Search Department"
-                  className="border rounded-md border-gray-400 p-3"
-                  value={searchDepartment}
-                  onChange={(e) => setSearchDepartment(e.target.value)}
-                />
-              </div>
+                    type="text"
+                    placeholder="Search Department"
+                    className="border rounded-md border-gray-400 p-3 w-full"
+                    value={searchDepartment}
+                    onChange={(e) => setSearchDepartment(e.target.value)}
+                  />
+                </Grid>
+              </Grid>
             </div>
             {filteredData.map((uni, index) => (
               <div
